@@ -2,7 +2,7 @@ import './App.css';
 import Layout from './layout/Layout';
 import Main from './components/main/Main';
 import { Route, Routes } from 'react-router-dom';
-import Category from './components/main/category';
+import Category from './components/main/Category';
 
 
 function App() {
