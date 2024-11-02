@@ -284,6 +284,9 @@ nav {
   }
 }
 
+.catName{
+  margin:  0 10px 0 15px;
+}
 .closed {
   left: -100% !important;
 }
@@ -301,7 +304,14 @@ nav {
     color: #fff;
   }
 }
-
+.catRootLi{
+  padding: 0!important;
+}
+.catRootLink{
+  padding: 8px 15px!important;
+  display: inline-block;
+  width: 100%;
+}
 #categoryBarAp {
   background-color: #fff;
   z-index: 999;

@@ -1,11 +1,28 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function Header({ data }) {
 
     const [menu, setMenu] = useState(false)
     const [cate, setCate] = useState(false)
-
+    const iconData = [
+        'https://neptun.az/image/catalog/icon-menu/Meyv%C9%99-v%C9%99-t%C9%99r%C9%99v%C9%99z.svg',
+        'https://neptun.az/image/catalog/icon-menu/%C9%99t-v%C9%99-toyuq%20m%C9%99hsullar%C4%B1.svg',
+        'https://neptun.az/image/catalog/icon-menu/Qastronom.svg',
+        'https://neptun.az/image/catalog/icon-menu/%C9%99rzaq%20m%C9%99hsullar%C4%B1.svg',
+        'https://neptun.az/image/catalog/icon-menu/%C5%9Eirniyyat-%C3%A7ay-v%C9%99%20q%C9%99hv%C9%99.svg',
+        'https://neptun.az/image/catalog/icon-menu/%C4%B0%C3%A7kil%C9%99r.svg',
+        'https://neptun.az/image/catalog/icon-menu/S%C3%BCd-m%C9%99hsullar%C4%B1.svg',
+        'https://neptun.az/image/catalog/icon-menu/U%C5%9Faq-m%C9%99hsullar%C4%B1.svg',
+        'https://neptun.az/image/catalog/icon-menu/Yuyucu-vasit%C9%99l%C9%99r.svg',
+        'https://neptun.az/image/catalog/icon-menu/Kosmetik-v%C9%99-gigiyenik.svg',
+        'https://neptun.az/image/catalog/icon-menu/M%C9%99i%C5%9F%C9%99t-m%C9%99tb%C9%99x-v%C9%99-tekstil.svg',
+        'https://neptun.az/image/catalog/icon-menu/Konselyariya.svg',
+        'https://neptun.az/image/catalog/icon-menu/Heyvan-yeml%C9%99ri.svg',
+        'https://neptun.az/image/catalog/icon-menu/neptun-icon.svg  ',
+        'https://neptun.az/image/catalog/icon-menu/neptun-icon.svg',
+        'https://neptun.az/image/catalog/icon-menu/elektronika-v%C9%99-mebel.svg'
+    ]
     function openMenu() {
         setMenu(!menu)
         closedCate()
@@ -62,14 +79,14 @@ function Header({ data }) {
 
                                     {data ? (
                                         data.map((item, i) => (
-                                            <li key={i} className='flex items-center justify-between categoryBarApList'>
-                                                <img src={`https://neptun.az/image/catalog/icon-menu/S%C3%BCd-m%C9%99hsullar%C4%B1.svg`} alt="" />
-                                                <span >{item.categoryName}</span>
-                                                <i class="fa-solid fa-chevron-right arrowRight"></i>
+                                            <li key={i} className='flex items-center  categoryBarApList '>
+                                                <img src={`${iconData[i]}`} alt="" />
+                                                <span className='catName'>{item.categoryName}</span>
+                                                <i class="fa-solid fa-chevron-right arrowRight  "></i>
                                                 <div>
                                                     <ul>
-                                                        {item.subcategory?.map(
-                                                            ele => <li> <Link to={`/category/${item.id}/${ele.id}`}>{ele.categoryName}</Link> </li>)
+                                                        {item.subcategory.map(
+                                                            ele => <li className='catRootLi'> <NavLink className="catRootLink" to={`/category/${item.id}/${ele.id}`}>{ele.categoryName}</NavLink> </li>)
                                                         }
                                                     </ul>
                                                 </div>
@@ -77,7 +94,7 @@ function Header({ data }) {
                                         ))
                                     ) : 'Gozleyin'}
                                 </ul>
-                            </div>  
+                            </div>
                             <ul id='navList' className='flex items-center'>
                                 <li>Ana səhifə</li>
                                 <li>Haqqımızda</li>
@@ -119,7 +136,7 @@ function Header({ data }) {
                         {data ? (
                             data.map((item, i) => (
                                 <li key={i} className='flex items-center'>
-                                    <img src="https://neptun.az/image/catalog/icon-menu/Meyv%C9%99-v%C9%99-t%C9%99r%C9%99v%C9%99z.svg" alt="" />
+                                    <img src={`${iconData[i]}`} alt="" />
                                     <span>{item.categoryName}</span>
 
                                 </li>
