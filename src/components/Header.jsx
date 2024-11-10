@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { DATA } from '../context/DataContext'
+import { LuTrash } from 'react-icons/lu'
 
-function Header({ data }) {
-
+function Header() {
+    const { category } = useContext(DATA)
     const [menu, setMenu] = useState(false)
     const [cate, setCate] = useState(false)
+    const [basketDisplay, setBasketDisplay] = useState(true)
+
     const iconData = [
         'https://neptun.az/image/catalog/icon-menu/Meyv%C9%99-v%C9%99-t%C9%99r%C9%99v%C9%99z.svg',
         'https://neptun.az/image/catalog/icon-menu/%C9%99t-v%C9%99-toyuq%20m%C9%99hsullar%C4%B1.svg',
@@ -41,7 +45,7 @@ function Header({ data }) {
     }
     return (
         <header >
-            <div className='container mx-auto px-4 sm:px-15 lg:px-20'>
+            <div className='container mx-auto px-4 sm:px-15 lg:px-20 bg-[#fff]'>
                 <div className='flex items-center justify-between py-4'>
                     <div className='flex items-center boxx' >
                         <img id='logo' src="/src/assets/img/neptun logo.png" alt="" />
@@ -75,10 +79,8 @@ function Header({ data }) {
                             <div id='ctegoryList'>
                                 <div id='category'><i class="fa-solid fa-bars"></i> <span>Kateqoriyalar</span></div>
                                 <ul id='categoryBarAp'>
-
-
-                                    {data ? (
-                                        data.map((item, i) => (
+                                    {category ? (
+                                        category.map((item, i) => (
                                             <li key={i} className='flex items-center  categoryBarApList '>
                                                 <img src={`${iconData[i]}`} alt="" />
                                                 <span className='catName'>{item.categoryName}</span>
@@ -113,14 +115,44 @@ function Header({ data }) {
                                     <i id='navArrow' class="fa-solid fa-chevron-down"></i>
                                 </a>
                             </div>
-                            <div id='triIco' className='flex items-center'>
+                            <div id='triIco' className='flex items-center relative'>
                                 <i class="fa-regular fa-heart"></i>
                                 <i class="fa-solid fa-arrows-rotate"></i>
-                                <i id='cartA' class="fa-solid fa-cart-shopping ">
+                                <i onClick={() => { setBasketDisplay(!basketDisplay) }} id='cartA' className="fa-solid fa-cart-shopping cursor-pointer ">
                                     <div id='basketMiqdar' className='flex items-center justify-center '>
                                         <span class="">0</span>
                                     </div>
                                 </i>
+                                <div className={`w-[340px]  right-0 top-[32px] z-30  bg-[#fff] basketRes absolute ${basketDisplay ? 'hidden' : "block"} `}>
+                                    <div className='    max-h-[300px]   overflow-y-scroll' >
+
+
+                                        <hr className='text-[#000]' />
+                                        <div className='flex items-center gap-[8px] h-[64px]'>
+                                            <img className='w-[65px] h-[64px]' src="https://neptun.az/image/cache/catalog/50_vhed-oo-270x270.jpg?v=9" alt="" />
+                                            <p className='text-[#555] text-[12px]'>MVT.MANDARIN YERLI KG</p>
+                                            <p className='text-[13px]' >1x</p>
+                                            <p className='text-[13px]' >11.50</p>
+                                            <  LuTrash />
+                                        </div>
+                                        <hr className='text-[#000]' />        <div className='flex items-center gap-[8px] h-[64px]'>
+                                            <img className='w-[65px] h-[64px]' src="https://neptun.az/image/cache/catalog/50_vhed-oo-270x270.jpg?v=9" alt="" />
+                                            <p className='text-[#555] text-[12px]'>MVT.MANDARIN YERLI KG</p>
+                                            <p className='text-[13px]' >1x</p>
+                                            <p className='text-[13px]' >11.50</p>
+                                            <  LuTrash />
+                                        </div>
+                                        <hr className='text-[#000]' />
+
+                                    </div>
+                                    <div className='w-full p-[10px]'>
+                                        <span className=' !text-center !text-[#000] !text-[16px] font-bold !w-full inline-block pb-[10px]'>Ümumi məbləğ: <span className='!font-normal !text-[#000]  !text-[16px]'>2.15₼</span> </span>
+                                        <div className='flex justify-between'>
+                                            <button className='bg-[#555] py-[9px] px-[20px] inline-block rounded-[27px] text-[#fff] text-[14px]'>Səbət</button>
+                                            <button className='bg-[#ff8300] py-[9px] px-[20px] inline-block rounded-[27px] text-[14px] text-[#fff]'>Sifarişi rəsmiləşdir</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div id='barNavlist2' onClick={openMenu} className='flex items-center justify-center'>
@@ -133,8 +165,8 @@ function Header({ data }) {
                         <i onClick={closedCate} class="fa-solid fa-xmark"></i>
                     </div>
                     <ul>
-                        {data ? (
-                            data.map((item, i) => (
+                        {category ? (
+                            category.map((item, i) => (
                                 <li key={i} className='flex items-center'>
                                     <img src={`${iconData[i]}`} alt="" />
                                     <span>{item.categoryName}</span>

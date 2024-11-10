@@ -227,7 +227,7 @@ nav {
 }
 
 .tabs-product {
-  width: 100%!important;
+  width: 100%;
   border-radius: 10px !important;
   text-align: center;
 
@@ -284,9 +284,14 @@ nav {
   }
 }
 
-.catName{
-  margin:  0 10px 0 15px;
+.mannn {
+  background-color: #f2f2f2;
 }
+
+.catName {
+  margin: 0 10px 0 15px;
+}
+
 .closed {
   left: -100% !important;
 }
@@ -304,22 +309,31 @@ nav {
     color: #fff;
   }
 }
-.catRootLi{
-  padding: 0!important;
+
+body {
+  background-color: #f2f2f2;
 }
-.catRootLink{
-  padding: 8px 15px!important;
+
+.catRootLi {
+  padding: 0 !important;
+}
+
+.catRootLink {
+  padding: 8px 15px !important;
   display: inline-block;
   width: 100%;
 }
+
 #categoryBarAp {
+  transition: .5s;
   background-color: #fff;
   z-index: 999;
   position: absolute;
   width: 100%;
   top: 45px;
+  height: auto;
+  display: none;
   left: 0;
-  height: 652px;
 
   li {
     cursor: pointer;
@@ -341,7 +355,9 @@ nav {
   }
 }
 
-
+#ctegoryList:hover #categoryBarAp {
+  display: block;
+}
 
 #endirimSlider {
   margin-left: 250px;
@@ -420,10 +436,18 @@ nav {
   height: auto;
 }
 
+/*Category css */
+/* .tabs-productCat {
+  width: 25%!important;
+} */
 @media only screen and (max-width: 1280px) {
   .resImg {
     display: initial;
 
+  }
+
+  .tabs-productCat {
+    width: 44% !important;
   }
 
   .resContainer {
@@ -462,6 +486,14 @@ nav {
     }
   }
 
+  #catFelxContainer {
+    margin: 0;
+  }
+
+  .tabs-productCat {
+    width: 28% !important;
+  }
+
   .resImg2 {
     display: none;
   }
@@ -484,6 +516,10 @@ nav {
     display: none !important;
   }
 
+  .tabs-productCat {
+    width: 48% !important;
+  }
+
   #textHesab {
     display: none;
   }
@@ -497,13 +533,25 @@ nav {
   }
 
 
+  .basketRes {
+    left: -95px;
+  }
 
   .endProduct3 {
     display: none;
   }
 }
 
+@media only screen and (max-width: 470px) {
+  .basketRes {
+    padding: 5px;
+    width: 300px!important;
+    left: -130px;
+  }
+}
+
 @media only screen and (max-width: 990px) {
+
   #barEnd {
     display: initial;
   }
@@ -524,6 +572,12 @@ nav {
     width: 48% !important;
   }
 
+}
+
+@media only screen and (max-width: 477px) {
+  .tabs-productCat {
+    width: 100% !important;
+  }
 }
 
 @media only screen and (max-width: 590px) {
