@@ -51,11 +51,11 @@ function Header() {
         return sebet.reduce((acc, item) => acc +  item.quantity, 0)
     }
     return (
-        <header className='pb-[15px]'>
-            <div className='container mx-auto px-4 sm:px-15 lg:px-20 bg-[#fff]'>
+        <header className='pb-[15px] !bg-[#fff]'>
+            <div className='container mx-auto px-4 sm:px-15 lg:px-20 '>
                 <div className='flex items-center justify-between py-4'>
                     <div className='flex items-center boxx' >
-                        <img id='logo' src="/src/assets/img/neptun logo.png" alt="" />
+                        <img id='logo' src="./public/assets/neptun logo.png" alt="" />
                         <div id='header-search' className='flex items-center justify-between'>
                             <div className='flex items-center'>
                                 <i id='searchLogo' className="fa-solid fa-magnifying-glass"></i>
@@ -70,7 +70,7 @@ function Header() {
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/800px-Flag_of_Azerbaijan.svg.png" alt="" />
                                 <span>AZ</span>
                             </div>
-                            <img id='call' src="/src/assets/img/Screenshot 2024-10-22 231621.png" alt="callimg" />
+                            <img id='call' src="./public/assets/img/Screenshot 2024-10-22 231621.png" alt="callimg" />
                         </div>
                         <div id='barNavlist' onClick={openMenu} className='flex items-center justify-center'>
                             <i className="fa-solid fa-bars"></i>

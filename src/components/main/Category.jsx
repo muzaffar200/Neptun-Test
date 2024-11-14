@@ -29,7 +29,7 @@ function Category() {
     
   }
   return ( 
-    <main className='bg-[#f2f2f2]'>
+    <main className=''>
       <div className='container mx-auto px-4 sm:px-15 lg:px-20'>
         <div id='catFelxContainer' className='flex  justify-center gap-[15px]	flex-wrap ml-[350px]'>
           {
