@@ -18,7 +18,7 @@ function Footer() {
           <div className="info group flex flex-col items-center lgx:flex-row w-[33.33%]">
             <img
               className="mb-[6px] group-hover:scale-110 transition-transform duration-300 lgx:pr-[27px]"
-              src="/src/assets/img/delivery.svg"
+              src="/public/assets/delivery.svg"
               alt="delivery"
             />
             <p className="text-center lgx:text-start inline-block">
@@ -30,7 +30,7 @@ function Footer() {
           <div className="info group flex flex-col items-center lgx:flex-row w-[33.33%]">
             <img
               className="mb-[6px] group-hover:scale-110 transition-transform duration-300 lgx:pr-[27px]"
-              src="/src/assets/img/cash.svg"
+              src="/public/assets/cash.svg"
               alt=""
             />
             <p className="text-center lgx:text-start inline-block">
@@ -42,7 +42,7 @@ function Footer() {
           <div className="info group flex flex-col items-center lgx:flex-row w-[33.33%]">
             <img
               className="mb-[6px] group-hover:scale-110 transition-transform duration-300 lgx:pr-[27px]"
-              src="/src/assets/img/gift.svg"
+              src="/public/assets/gift.svg"
               alt=""
             />
             <p className="text-center lgx:text-start inline-block">
@@ -54,7 +54,7 @@ function Footer() {
           <div className="info group hidden md:flex  flex-col lgx:flex-row items-center w-[33.33%]">
             <img
               className="mb-[6px] group-hover:scale-110 transition-transform duration-300 lgx:pr-[27px]"
-              src="/src/assets/img/online.svg"
+              src="/public/assets/online.svg"
               alt=""
             />
             <p className="text-center lgx:text-start inline-block">
@@ -66,7 +66,7 @@ function Footer() {
           <div className="info group hidden md:flex flex-col lgx:flex-row items-center w-[33.33%]">
             <img
               className="mb-[6px] group-hover:scale-110 transition-transform duration-300 lgx:pr-[27px]"
-              src="/src/assets/img/mobile.svg"
+              src="/public/assets/mobile.svg"
               alt=""
             />
             <p className="text-center lgx:text-start inline-block">
@@ -85,7 +85,7 @@ function Footer() {
                 Bizə abunə olun
               </p>
               <form className="w-full mdl:w-auto">
-                <div className="relative w-full md:w-[50vw] mdl:w-[22vw]">
+                <div className="relative w-full md:w-[350px] mdl:w-[22vw]">
                   <input
                     type="email"
                     className="block h-[42px] w-full px-5 text-[.85rem] text-gray-900 border border-[#ff8230] rounded-full bg-white"
@@ -106,7 +106,7 @@ function Footer() {
               <p className="text-[11px] w-[153px] font-bold text-white py-[15px]">
                 Sms xəbərdarlıq üçün
               </p>
-              <form className="flex w-full mdl:w-auto space-x-4">
+              <form className="flex w-full md:w-[350px] mdl:w-[22vw] space-x-4">
                 <select className="h-[42px] px-[15px] text-[12px] text-[#999] bg-white border border-[#ff8230] rounded-full">
                   <option disabled>
                     ---

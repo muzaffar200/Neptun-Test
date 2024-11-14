@@ -28,6 +28,7 @@ function Category() {
     console.log(sebet);
     
   }
+  
   return ( 
     <main className=''>
       <div className='container mx-auto px-4 sm:px-15 lg:px-20'>
@@ -64,7 +65,7 @@ function Category() {
 
               Array(10).fill("").map((_, i) => {
                 return (
-                  <div key={i} className="flex m-8 rounded shadow-md   animate-pulse h-96  tabs-productCat w-[23%]   tabs-product">
+                  <div key={i} className="flex  rounded shadow-md   animate-pulse h-96  tabs-productCat w-[23%]   tabs-product">
                     <div className="h-48 rounded-t bg-gray-400"></div> {/* Üst hissə biraz açıq tünd */}
                     <div className="flex-1 px-4 py-8 space-y-4 sm:p-8 bg-gray-300"> {/* Arxa plan daha açıq */}
                       <div className="w-full h-6 rounded bg-gray-400"></div> {/* İç bloklar daha açıq tünd */}

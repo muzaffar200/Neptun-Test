@@ -1,12 +1,15 @@
 import React, { useContext, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { DATA } from '../context/DataContext'
 import { LuTrash } from 'react-icons/lu'
 import { BASKET } from '../context/BasketContext'
+import { IoCloseCircle } from "react-icons/io5";
 
 function Header() {
     const { category } = useContext(DATA)
+    console.log(category);
     const [menu, setMenu] = useState(false)
+    const [openCategories, setOpenCategories] = useState([]);
     const [cate, setCate] = useState(false)
     const [basketDisplay, setBasketDisplay] = useState(true)
     const { sebet, removeFromBasket, caunt } = useContext(BASKET)
@@ -28,6 +31,18 @@ function Header() {
         'https://neptun.az/image/catalog/icon-menu/neptun-icon.svg',
         'https://neptun.az/image/catalog/icon-menu/elektronika-v%C9%99-mebel.svg'
     ]
+
+    function toggleCategory(index) {
+        if (openCategories.includes(index)) {
+            setOpenCategories(openCategories.filter(item => item != index))
+        }
+        else {
+            setOpenCategories([...openCategories, index])
+
+        }
+    console.log(index);
+    
+    }
     function openMenu() {
         setMenu(!menu)
         closedCate()
@@ -48,14 +63,14 @@ function Header() {
         return sebet.reduce((acc, item) => acc + (item.price * item.quantity), 0)
     }
     function totalQuantity() {
-        return sebet.reduce((acc, item) => acc +  item.quantity, 0)
+        return sebet.reduce((acc, item) => acc + item.quantity, 0)
     }
     return (
         <header className='pb-[15px] !bg-[#fff]'>
             <div className='container mx-auto px-4 sm:px-15 lg:px-20 '>
                 <div className='flex items-center justify-between py-4'>
                     <div className='flex items-center boxx' >
-                        <img id='logo' src="./public/assets/neptun logo.png" alt="" />
+                        <img id='logo' src="/assets/neptun logo.png" alt="" />
                         <div id='header-search' className='flex items-center justify-between'>
                             <div className='flex items-center'>
                                 <i id='searchLogo' className="fa-solid fa-magnifying-glass"></i>
@@ -70,7 +85,7 @@ function Header() {
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/800px-Flag_of_Azerbaijan.svg.png" alt="" />
                                 <span>AZ</span>
                             </div>
-                            <img id='call' src="./public/assets/img/Screenshot 2024-10-22 231621.png" alt="callimg" />
+                            <img id='call' src="/assets/Screenshot 2024-10-22 231621.png" alt="callimg" />
                         </div>
                         <div id='barNavlist' onClick={openMenu} className='flex items-center justify-center'>
                             <i className="fa-solid fa-bars"></i>
@@ -140,7 +155,7 @@ function Header() {
                                                             <img className='w-[65px] h-[64px]' src={item.img} alt={item.name} />
                                                             <p className='text-[#555] text-[12px] inline-block w-[160px]'>{item.name}</p>
                                                             <p className='text-[13px]'>{item.quantity}x</p>
-                                                            <p className='text-[13px]'>{(item.price*item.quantity).toFixed(2)}</p>
+                                                            <p className='text-[13px]'>{(item.price * item.quantity).toFixed(2)}</p>
                                                             <LuTrash onClick={() => { removeFromBasket(item.id) }} className=' cursor-pointer' />
                                                         </div>
                                                         <hr className='text-[#000]' />
@@ -170,20 +185,29 @@ function Header() {
                         <i onClick={closedCate} className="fa-solid fa-xmark"></i>
                     </div>
                     <ul>
+
                         {category ? (
                             category.map((item, i) => (
-                                <li key={i} className='flex items-center'>
-                                    <img src={`${iconData[i]}`} alt="" />
-                                    <span>{item.categoryName}</span>
+                                <React.Fragment key={i}>
+                                    <li key={i} onClick={() => { toggleCategory(i) }} className='flex items-center'>
+                                        <img src={`${iconData[i]}`} alt="" />
+                                        <span>{item.categoryName}</span>
+                                    </li>
+                                    <ul className={`border pl-[20px] relative ${openCategories.includes(i) ? "block" : 'hidden'}`}>
+                                        {item.subcategory.map(
+                                            ele => <li className='py-[5px] !border-none text-[#444] !text-[14px] uppercase font-normal' > <NavLink className="catRootLink" to={`/category/${item.id}/${ele.id}`}>{ele.categoryName}</NavLink> </li>)
+                                        }
+                                        <div onClick={() => { toggleCategory(i) }} className='absolute top-[5px] right-[5px] text-[#000]'>
+                                            <IoCloseCircle className='text-[18px] text-[#444]' />
+                                        </div>
+                                    </ul>
 
-                                </li>
+                                </React.Fragment >
+
+
                             ))
-                        ) : (
-                            <li className='flex items-center'>
-                                <img src="https://neptun.az/image/catalog/icon-menu/Meyv%C9%99-v%C9%99-t%C9%99r%C9%99v%C9%99z.svg" alt="" />
-                                <span>Meyvə, tərəvəz, quru meyvə</span>
-                            </li>
-                        )}
+                        ) : ''
+                        }
 
                     </ul>
                 </div>
