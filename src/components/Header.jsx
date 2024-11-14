@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { DATA } from '../context/DataContext'
 import { LuTrash } from 'react-icons/lu'
 import { BASKET } from '../context/BasketContext'
@@ -40,8 +40,8 @@ function Header() {
             setOpenCategories([...openCategories, index])
 
         }
-    console.log(index);
-    
+        console.log(index);
+
     }
     function openMenu() {
         setMenu(!menu)
@@ -65,6 +65,8 @@ function Header() {
     function totalQuantity() {
         return sebet.reduce((acc, item) => acc + item.quantity, 0)
     }
+    const url = useLocation().pathname
+
     return (
         <header className='pb-[15px] !bg-[#fff]'>
             <div className='container mx-auto px-4 sm:px-15 lg:px-20 '>
@@ -100,7 +102,7 @@ function Header() {
                             <i id='barEnd' onClick={openCate} className="fa-solid fa-bars"></i>
                             <div id='ctegoryList'>
                                 <div id='category'><i className="fa-solid fa-bars"></i> <span>Kateqoriyalar</span></div>
-                                <ul id='categoryBarAp'>
+                                <ul id='categoryBarAp' className={url=='/'?'block':'hidden'}>
                                     {category ? (
                                         category.map((item, i) => (
                                             <li key={i} className='flex items-center  categoryBarApList '>
