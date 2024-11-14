@@ -18,7 +18,7 @@ function Footer() {
           <div className="info group flex flex-col items-center lgx:flex-row w-[33.33%]">
             <img
               className="mb-[6px] group-hover:scale-110 transition-transform duration-300 lgx:pr-[27px]"
-              src="/public/assets/delivery.svg"
+              src="/assets/delivery.svg"
               alt="delivery"
             />
             <p className="text-center lgx:text-start inline-block">
@@ -30,7 +30,7 @@ function Footer() {
           <div className="info group flex flex-col items-center lgx:flex-row w-[33.33%]">
             <img
               className="mb-[6px] group-hover:scale-110 transition-transform duration-300 lgx:pr-[27px]"
-              src="/public/assets/cash.svg"
+              src="/assets/cash.svg"
               alt=""
             />
             <p className="text-center lgx:text-start inline-block">
@@ -42,7 +42,7 @@ function Footer() {
           <div className="info group flex flex-col items-center lgx:flex-row w-[33.33%]">
             <img
               className="mb-[6px] group-hover:scale-110 transition-transform duration-300 lgx:pr-[27px]"
-              src="/public/assets/gift.svg"
+              src="/assets/gift.svg"
               alt=""
             />
             <p className="text-center lgx:text-start inline-block">
@@ -54,7 +54,7 @@ function Footer() {
           <div className="info group hidden md:flex  flex-col lgx:flex-row items-center w-[33.33%]">
             <img
               className="mb-[6px] group-hover:scale-110 transition-transform duration-300 lgx:pr-[27px]"
-              src="/public/assets/online.svg"
+              src="/assets/online.svg"
               alt=""
             />
             <p className="text-center lgx:text-start inline-block">
@@ -66,7 +66,7 @@ function Footer() {
           <div className="info group hidden md:flex flex-col lgx:flex-row items-center w-[33.33%]">
             <img
               className="mb-[6px] group-hover:scale-110 transition-transform duration-300 lgx:pr-[27px]"
-              src="/public/assets/mobile.svg"
+              src="/assets/mobile.svg"
               alt=""
             />
             <p className="text-center lgx:text-start inline-block">
