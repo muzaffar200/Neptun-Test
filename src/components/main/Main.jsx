@@ -4,10 +4,10 @@ import YalnizNeptunda from './YalnizNeptunda'
 
 function Main() {
     return (
-        <>
+        <main>
             <Endirimler />
             <YalnizNeptunda />
-        </>
+        </main>
     )
 }
 

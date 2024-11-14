@@ -362,7 +362,10 @@ body {
 #endirimSlider {
   margin-left: 250px;
 }
+#endirimCart{
+  margin-left: 250px;
 
+}
 .bg-boz {
   background-color: #f2f2f2;
 }
@@ -559,7 +562,10 @@ body {
   #endirimSlider {
     margin: 0 !important;
   }
+  #endirimCart{
+    margin: 0 !important;
 
+  }
   #ctegoryList {
     display: none !important;
   }
@@ -623,54 +629,42 @@ body {
     width: 100%;
   }
 }
+/* Slider */
+/* Birinci slider üçün */
+.mySwiper1 .swiper-button-next {
+  position: absolute;
+top: 50%;  
+background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%);
 
-
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-/* 
-
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 80%;
-  object-fit: cover;
-}
-
-.mySwiper .swiper-button-next,
-.mySwiper .swiper-button-prev {
-  background-color: #f2f2f2;
-  opacity: 50%;
-  color: #ff8300;
-  border-radius: 0 50% 50% 0;
+  border: none; 
   width: 35px;
   height: 82px;
-
-  .swiper {
-    width: 100%;
-    height: 100%;
-  }
+  padding: 10px; 
+  transition: background-color 0.3s; 
+  border-top-left-radius: 41px; /* Hündürlüyün yarısı */
+  border-bottom-left-radius: 41px; /* Hündürlüyün yarısı */
+  right: 0;
+}
+.mySwiper1 .swiper-button-next::after{
+  color: #ff8300;
+  font-size: 15px;
+}
+.mySwiper1 .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none; 
+  width: 35px;
+  height: 82px;
+  padding: 10px; 
+  transition: background-color 0.3s; 
+  left: 0;
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0; 
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #f2f2f2;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+.mySwiper1 .swiper-button-prev::after{
+  font-size: 15px;
+  color: #ff8300;
+}

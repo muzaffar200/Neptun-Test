@@ -12,12 +12,12 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route path='/' element={<Main/>} />
-          <Route path="/category/:catId/:subId" element={<Category/>} />
-          <Route path='/product/:productId' element={<SingleProduct/>}/>
+          <Route path='/' element={<Main />} />
+          <Route path="/category/:catId/:subId" element={<Category />} />
+          <Route path='/product/:productId' element={<SingleProduct />} />
         </Route>
       </Routes>
-    </> 
+    </>
   );
 }
 
