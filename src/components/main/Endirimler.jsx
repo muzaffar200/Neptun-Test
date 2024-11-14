@@ -40,15 +40,15 @@ function Endirimler() {
 
                 <div id='endirimCart' className='flex justify-between gap-[15px]'>
                     <div className=''>
-                        <img src="./public/assets/50-azn-50-bonus-1143x7272-370x225.png" alt="" />
+                        <img src="/assets/50-azn-50-bonus-1143x7272-370x225.png" alt="" />
                         <div className='flex justify-between items-center bg-[#fff] p-[6px] '><span className='custom-989:text-[12px]'>50 Azn 50 Bonus</span><FaArrowRightLong className='text-[22px]' /></div>
                     </div>
                     <div className=''>
-                        <img src="./public/assets/nes-cake-banner-sayt-370x225.webp" alt="" />
+                        <img src="/assets/nes-cake-banner-sayt-370x225.webp" alt="" />
                         <div className='flex justify-between items-center bg-[#fff] p-[6px] '><span className='custom-989:text-[12px]'>50 Azn 50 Bonus</span><FaArrowRightLong className='text-[22px]' /></div>
                     </div>
                     <div className='custom-989:hidden'>
-                        <img src="./public/assets/heftesonu-banner2-19-20-oktyabr-tess-cay-perwoll-370x225.webp" alt="" />
+                        <img src="/assets/heftesonu-banner2-19-20-oktyabr-tess-cay-perwoll-370x225.webp" alt="" />
                         <div className='flex justify-between items-center bg-[#fff] p-[6px] '><span className='custom-989:text-[12px]'>50 Azn 50 Bonus</span><FaArrowRightLong className='text-[22px]' /></div>
                     </div>
                 </div>
