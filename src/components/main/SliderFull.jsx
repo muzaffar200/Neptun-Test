@@ -14,7 +14,6 @@ console.log(discount);
             <Swiper
                 slidesPerView={1}
                 spaceBetween={10}
-                loop={true}
                 pagination={{
                     clickable: true,
                 }}
