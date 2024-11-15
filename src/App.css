@@ -196,13 +196,14 @@ nav {
 }
 
 .item-cat-image {
-  width: 35%;
-  object-fit: contain;
+  width:35%;
+  height: 375px;
+  object-fit: cover;
   margin-right: 8px;
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 
@@ -368,6 +369,9 @@ body {
   margin-left: 250px;
 
 }
+.addBasketBtn{
+margin-bottom: 45px!important;
+}
 .bg-boz {
   background-color: #f2f2f2;
 }
@@ -441,10 +445,6 @@ body {
   height: auto;
 }
 
-/*Category css */
-/* .tabs-productCat {
-  width: 25%!important;
-} */
 @media only screen and (max-width: 1280px) {
   .resImg {
     display: initial;
@@ -464,32 +464,16 @@ body {
     width: 100%;
   }
 
-  .item-cat-image {
-    width: 100%;
-    margin-bottom: 25px;
-
-
-    img {
-      width: 33%;
-      height: auto;
-    }
-  }
 
   .endProdut {
     display: none;
   }
 
-  /* .tabs-product {
-    width: 33%;
-  } */
+
 }
 
 @media only screen and (max-width: 960px) {
-  .item-cat-image {
-    img {
-      width: 49%;
-    }
-  }
+
 
   #catFelxContainer {
     margin: 0;
@@ -502,10 +486,6 @@ body {
   .resImg2 {
     display: none;
   }
-
-  /* .tabs-product {
-    width: 49%;
-  } */
 
   .endProduct2 {
     display: none;
@@ -612,7 +592,11 @@ body {
   #navList {
     display: none;
   }
-
+  .item-cat-image{
+    margin-bottom: 20px;
+    height: auto;
+    width: 100%!important;
+  }
   #test {
     display: none;
   }
@@ -635,10 +619,9 @@ body {
 /* Birinci slider üçün */
 .mySwiper1 .swiper-button-next {
   position: absolute;
-top: 50%;  
-background-color: rgba(255, 255, 255, 0.5);
+  top: 50%;  
+  background-color: rgba(255, 255, 255, 0.5);
   transform: translateY(-50%);
-
   border: none; 
   width: 35px;
   height: 82px;
@@ -679,4 +662,72 @@ background-color: rgba(255, 255, 255, 0.5);
 .mySwiper1 .swiper-button-prev::after{
   font-size: 15px;
   color: #ff8300;
+}
+
+/* Yalniz neptunda Slider */
+
+
+/* slider1 */
+.custom-swiper-button-next,
+.custom-swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 82px;
+    padding: 10px; 
+    background-color: #f2f2f2;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    right: 0;
+
+}
+
+.custom-swiper-button-next {
+  right: 0;
+  border-top-left-radius: 41px;
+  border-bottom-left-radius: 41px; 
+}
+
+.custom-swiper-button-prev {
+  border-top-right-radius: 41px;
+  border-bottom-right-radius: 41px; 
+    left: 0;
+}
+
+/* slider2 */
+.custom-swiper-button2-next,
+.custom-swiper-button2-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 82px;
+    padding: 10px; 
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    right: 0;
+
+}
+
+.custom-swiper-button2-next {
+  right: 0;
+  border-top-left-radius: 41px;
+  border-bottom-left-radius: 41px; 
+}
+
+.custom-swiper-button2-prev {
+  border-top-right-radius: 41px;
+  border-bottom-right-radius: 41px; 
+    left: 0;
 }
