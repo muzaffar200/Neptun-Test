@@ -9,7 +9,7 @@ function YalnizNeptunda() {
     return (
         <>
             <section className='container mx-auto px-4 sm:px-15 lg:px-20'>
-                <div className='flex  resContainer '>
+                <div className='flex  resContainer pb-[50px]'>
                     <div className='item-cat-image  flex justify-between  w-[30%] '>
                         <Swiper
                             slidesPerView={1}
@@ -42,35 +42,35 @@ function YalnizNeptunda() {
                             <SwiperSlide className='relative' >
                                 <img className='w-full' src="/assets/meyve-terevez.jpg" alt="" />
                                 <div className='absolute left-0 top-0 z-50  text-[#fff] p-[15px] bg-[#29292991] rounded-br-[15px]'>
-                                    <h5 className='text-[18px] pb-[10px]'>Kateqoriyalar:</h5>
+                                    <h5 className='text-[18px] pb-[]'>Kateqoriyalar:</h5>
                                     <h5 className='text-[18px]'>Meyvə</h5>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide >
                                 <img className='w-full' src="/assets/550x550reklam1.jpg" alt="" />
                                 <div className='absolute left-0 top-0 z-50  text-[#fff] p-[15px] bg-[#29292991] rounded-br-[15px]'>
-                                    <h5 className='text-[18px] pb-[10px]'>Kateqoriyalar:</h5>
+                                    <h5 className='text-[18px] pb-[]'>Kateqoriyalar:</h5>
                                     <h5 className='text-[18px]'>Səhər yeməkləri</h5>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide >
                                 <img className='w-full' src="/assets/550x550reklam2.jpg" alt="" />
                                 <div className='absolute left-0 top-0 z-50  text-[#fff] p-[15px] bg-[#29292991] rounded-br-[15px]'>
-                                    <h5 className='text-[18px] pb-[10px]'>Kateqoriyalar:</h5>
+                                    <h5 className='text-[18px] pb-[]'>Kateqoriyalar:</h5>
                                     <h5 className='text-[18px]'>Yalnız Neptunda</h5>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide >
                                 <img className='w-full' src="/assets/siyniyyat.jpg" alt="" />
                                 <div className='absolute left-0 top-0 z-50  text-[#fff] p-[15px] bg-[#29292991] rounded-br-[15px]'>
-                                    <h5 className='text-[18px] pb-[10px]'>Kateqoriyalar:</h5>
+                                    <h5 className='text-[18px] pb-[]'>Kateqoriyalar:</h5>
                                     <h5 className='text-[18px]'>NesCake</h5>
                                 </div>
                             </SwiperSlide>
                             <SwiperSlide >
                                 <img className='w-full' src="/assets/cerez.jpg" alt="" />
                                 <div className='absolute left-0 top-0 z-50  text-[#fff] p-[15px] bg-[#29292991] rounded-br-[15px]'>
-                                    <h5 className='text-[18px] pb-[10px]'>Kateqoriyalar:</h5>
+                                    <h5 className='text-[18px] pb-[]'>Kateqoriyalar:</h5>
                                     <h5 className='text-[18px]'>Quru meyvələr</h5>
                                 </div>
                             </SwiperSlide>
@@ -94,15 +94,15 @@ function YalnizNeptunda() {
                         breakpoints={{
                             640: {
                                 slidesPerView: 2,
-                                spaceBetween: 20,
+                                spaceBetween: 10,
                             },
                             768: {
                                 slidesPerView: 3,
-                                spaceBetween: 40,
+                                spaceBetween: 10,
                             },
                             1024: {
                                 slidesPerView: 4,
-                                spaceBetween: 20,
+                                spaceBetween: 10,
                             },
                         }}
                         modules={[Navigation]} // Navigation burada

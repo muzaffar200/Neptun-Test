@@ -3,7 +3,10 @@ async function getAllCategory() {
      const res= await axios.get('https://neptunbk.vercel.app/categories')
     return res.data
 }
-
+async function getFirstDiscount() {
+  const res= await axios.get('https://neptunbk.vercel.app/products/discounted')
+ return res.data
+}
 async function getSubCategory(id) {
   const res= await axios.get(`https://neptunbk.vercel.app/products/subcategory/${id}`)
     return res.data
@@ -15,5 +18,6 @@ async function getProductId(id) {
 export{
     getAllCategory,
     getSubCategory,
-    getProductId
+    getProductId,
+    getFirstDiscount
 }
